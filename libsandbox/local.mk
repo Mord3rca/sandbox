@@ -35,7 +35,8 @@ libsbutil/.libs/libsbutil.a: libsbutil/libsbutil.la
 	%D%/trace.c      \
 	%D%/wrappers.h   \
 	%D%/wrappers.c   \
-	%D%/canonicalize.c
+	%D%/canonicalize.c \
+	%D%/sb_shadow.c
 
 install-exec-hook:
 	rm -f $(DESTDIR)$(libdir)/libsandbox.la
