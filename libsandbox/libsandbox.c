@@ -15,6 +15,7 @@
 #include "libsandbox.h"
 #include "wrappers.h"
 #include "sb_nr.h"
+#include "sb_shadow.h"
 
 #define LOG_VERSION			"1.0"
 #define LOG_STRING			"VERSION " LOG_VERSION "\n"
@@ -101,6 +102,8 @@ void libsb_init(void)
 		if (ldpath)
 			sbcontext.ld_library_path = xstrdup(ldpath);
 	}
+
+	sb_shadow_init();
 }
 
 sandbox_method_t get_sandbox_method(void)
